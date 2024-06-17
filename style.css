@@ -44,23 +44,29 @@ header nav a:hover {
     margin-right: 10px;
 }
 
-.welcome {
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
+}
+
+.welcome {
     padding: 20px;
     background-color: #282828;
     color: #00ccff;
     font-size: 2em;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.video-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    padding: 20px 0;
+.video-container {
+    margin: 20px 0;
 }
 
-.video-banner video {
+.video-container video {
     width: 80%;
     max-height: 500px;
     object-fit: cover;
@@ -223,7 +229,7 @@ button:hover {
         margin-top: 10px;
     }
 
-    .video-banner video {
+    .video-container video {
         max-height: 300px;
     }
 }
