@@ -64,17 +64,6 @@ header nav a:hover {
 
 .video-container {
     margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.video-container video {
-    width: 80%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 10px;
 }
 
 .intro-button {
