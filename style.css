@@ -38,6 +38,28 @@ header nav a:hover {
     margin-right: 10px;
 }
 
+.welcome {
+    text-align: center;
+    padding: 20px;
+    background-color: #282828;
+    color: #00ccff;
+    font-size: 2em;
+}
+
+.video-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding: 20px 0;
+}
+
+.video-banner video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
 .hero {
     background: url('hero-background.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -129,23 +151,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.video-container video {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #00ccff;
-    border-radius: 10px;
-}
-
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 3em;
@@ -162,6 +167,10 @@ button:hover {
 
     header nav {
         margin-top: 10px;
+    }
+
+    .video-banner video {
+        max-height: 300px;
     }
 }
 
