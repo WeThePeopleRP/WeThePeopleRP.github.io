@@ -1,244 +1,204 @@
-@import url('https://fonts.cdnfonts.com/css/akrobat');
-
+/* Base Styles */
 body {
-  background-size: cover;
-  background-image: url("img/background.png");
-  overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #eaeaea;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
-#logo {
-  position: absolute;
-  width: 4.2vh;
-  height: 3vw;
-  top: 5%;
-  left: 5%;
+body.fade-out {
+    opacity: 0;
 }
 
-#mascot_mobile {
-  display: none;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#strich1 {
-  position: absolute;
-  width: 206.67vh;
-  height: 0;
-  border: 0.05vw solid rgba(53, 53, 53, 0.6);
-  left: 0;
-  top: 15%;
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-#home, #forum, #shop, #rules, #dc {
-  position: absolute;
-  font-family: 'Akrobat Light', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.04vw;
-  line-height: 1.25vw;
-  color: #FFFFFF;
-  text-decoration: none;
+header nav a:hover {
+    color: #007bff;
 }
 
-#home { left: 25%; top: 7%; }
-#forum { left: 40%; top: 7%; }
-#shop { left: 55%; top: 7%; }
-#rules { left: 70%; top: 7%; }
-#dc { left: 85%; top: 7%; }
-
-#home:hover, #forum:hover, #shop:hover, #rules:hover, #dc:hover {
-  color: #0084ff;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-#homestrich {
-  position: absolute;
-  width: 2.37vh;
-  height: 0.1vw;
-  background: #0084FF;
-  box-shadow: 0 0 0.16vw #6DB9FF;
-  top: 10%;
-  left: 25.5%;
+.logo img {
+    height: 50px;
+    margin-right: 10px;
 }
 
-#serverinfo, #serverextra {
-  position: absolute;
-  font-family: 'Akrobat SemiBold', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.3vw;
-  line-height: 1.56vw;
-  color: #FFFFFF;
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
-#serverinfo { top: 20%; }
-#serverextra { top: 50%; }
-
-#serverinfotext, #serverextratext {
-  position: absolute;
-  font-family: 'Akrobat Light', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 0.63vw;
-  line-height: 0.73vw;
-  color: rgba(255, 255, 255, 0.5);
+.welcome {
+    padding: 20px;
+    background-color: #282828;
+    color: #00ccff;
+    font-size: 2em;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-#serverinfotext { top: 30%; }
-#serverextratext { top: 60%; }
-
-#play {
-  position: absolute;
-  width: 44.13vh;
-  height: 4.58vw;
-  background: rgba(0, 132, 255, 0.8);
-  box-shadow: 0 0 0.26vw #65C7FF;
-  border-radius: 0.26vw;
-  text-align: center;
-  top: 80%;
-  left: 60%;
-  cursor: pointer;
-  transition: 0.5s;
+.video-container {
+    margin: 20px 0;
 }
 
-#play:after {
-  content: '▶';
-  font-family: 'Akrobat Light', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.82vw;
-  line-height: 2.19vw;
-  color: #000000;
-  position: absolute;
-  opacity: 0;
-  top: 30%;
-  left: 40%;
-  transition: 0.3s;
+.intro-button {
+    text-align: center;
+    margin: 20px 0;
 }
 
-#play:hover {
-  padding-right: 2%;
-  padding-left: 1%;
+.intro-button button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#play:hover:after {
-  opacity: 1;
-  right: 2%;
+.intro-button button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-#playtext {
-  position: absolute;
-  left: 40%;
-  top: 30%;
-  font-family: 'Akrobat Light', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.82vw;
-  line-height: 2.19vw;
-  color: #000000;
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
 }
 
-#mascot {
-  position: absolute;
-  max-width: 100%;
-  height: auto;
-  left: -20%;
-  top: 10%;
+.hero h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#logotext {
-  position: absolute;
-  top: 5.4%;
-  font-family: 'Akrobat Bold', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.54vw;
-  line-height: 1.56vw;
-  color: #0084FF;
-  left: 9%;
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-#logotext2 {
-  position: absolute;
-  top: 80%;
-  left: 0%;
-  font-size: 1.25vw;
-  color: #FFFFFF;
+.hero button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-#mobile-trigger, #mobilenav {
-  display: none;
+.hero button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-@media (max-width: 1000px) {
-  body {
-    overflow-x: hidden;
-    background-image: url(img/bg_mobile.png);
-  }
+section {
+    padding: 40px 20px;
+}
 
-  #logo {
-    width: 9.56vw;
-    height: 7.24vh;
-    top: 2%;
-    left: 28%;
-  }
+.about-us, .server-info, .rules, .downloads, .contact, .things-to-do {
+    text-align: center;
+    padding: 20px;
+    background-color: #282828;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
 
-  #logotext {
-    top: 2%;
-    left: 40%;
-    font-size: 8.04vw;
-    line-height: 8.56vw;
-  }
+.about-us:hover, .server-info:hover, .rules:hover, .downloads:hover, .contact:hover, .things-to-do:hover {
+    transform: scale(1.02);
+    background-color: #333;
+}
 
-  #logotext2 {
-    font-size: 6.89vw;
-  }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
 
-  #servername {
-    font-size: 8.13vw;
-    left: 12.5%;
-  }
+h1, h2 {
+    color: #00ccff;
+}
 
-  #textbox {
-    width: 83.06vh;
-    height: 66.04vw;
-    top: 30%;
-    left: 5%;
-    text-align: left;
-  }
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-  #serverinfo, #serverextra {
-    font-size: 5.3vw;
-  }
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
 
-  #serverinfotext, #serverextratext {
-    font-size: 2.63vw;
-    line-height: 2.99vw;
-  }
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3em;
+    }
 
-  #mascot {
-    left: -35%;
-    top: 15%;
-    opacity: 20%;
-  }
+    .hero p {
+        font-size: 1.2em;
+    }
 
-  #play {
-    width: 24.13vh;
-    height: 10.58vw;
-    top: 80%;
-    left: 30%;
-  }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  #playtext {
-    left: 33.2%;
-    top: 40%;
-    font-size: 7.82vw;
-  }
+    header nav {
+        margin-top: 10px;
+    }
 
-  #home, #forum, #shop, #rules, #dc {
-    font-size: 3.54vw;
-    left: 10%;
-    top: 15%;
-  }
-
-  #homestrich, #strich1 {
-    display: none;
-  }
+    .video-container video {
+        width: 100%;
+        max-width: 100%;
+    }
 }
