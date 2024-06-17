@@ -1,4 +1,4 @@
- .u-section-1 {
+.u-section-1 {
   background-image: url("images/14.png");
   background-position: 50% 50%;
 }
@@ -56,7 +56,9 @@
   .u-section-1 .u-group-1 {
     width: 340px;
   }
-}.u-section-2 .u-sheet-1 {
+}
+
+.u-section-2 .u-sheet-1 {
   min-height: 500px;
 }
 
@@ -204,7 +206,9 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-}.u-section-3 .u-sheet-1 {
+}
+
+.u-section-3 .u-sheet-1 {
   min-height: 500px;
 }
 
